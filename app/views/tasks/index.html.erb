@@ -1,0 +1,30 @@
+<h1>Showing all Tasks</h1>
+
+
+<table class="table table-striped table-bordered table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th>Title</th>
+        <th>Task Content</th>
+        <th>Created By</th>
+        <th>Created At</th>
+        <th>Status</th>
+        <th> </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @tasks.each do |task| %>
+        <tr>
+          <td>
+            <%= link_to task.title , task %>
+          </td>
+          <td><%= task.content %></td>
+          <td><%= task.createdby %></td>
+          <td><%= task.createdat %></td>
+          <td><%= task.completed %></td> </tr>
+      <% end %>
+    </tbody>
+</table>
+
+<%= link_to 'Add New Task', new_task_path, class:'btn btn-secondary' %>
