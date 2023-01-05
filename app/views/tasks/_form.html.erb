@@ -28,11 +28,8 @@
     <%= form.datetime_field :createdat, class:'form-control', placeholder:"Enter current Time & Date" %>
   </div>
   <br/>
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-    <label class="form-check-label" for="flexCheckDefault">
-      Completed
-    </label>
+  <div class="form field-group">
+    <%= form.check_box :completed, { class: "class-name", style: "style"}, "checked-value", "unchecked-value" %> Completed
   </div>
   <br/>
   <div class="actions">

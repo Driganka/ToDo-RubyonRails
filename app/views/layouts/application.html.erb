@@ -16,6 +16,9 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    
     <%= render 'home/header' %>
     <div class = 'container'>
       <% if notice %>
