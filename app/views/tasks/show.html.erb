@@ -4,6 +4,7 @@
   <%= link_to 'Edit', edit_task_path, class:'btn btn-secondary' %>
   <%= link_to 'Back', tasks_path, class:'btn btn-secondary' %>
   <div class="delete">
+    <!-- Below, link_to DOES NOT WORK -->
     <%= button_to 'Delete', @task, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger btn-lg' %>
   </div>
 </div>
