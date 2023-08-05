@@ -20,7 +20,7 @@
   </div>
   <br/>
   <div class="field form-group">
-    <%= form.text_field :createdby, class:'form-control', placeholder:"Enter Your Name" %>
+    <%= form.text_field :createdby, class:'form-control', placeholder:"Enter Your Name", value: current_user.name %>
   </div>
   <br/>
   <div class="field form-group">
@@ -31,6 +31,9 @@
     <%= form.check_box :completed, { class: "class-name", style: "style"}%> Completed
   </div>
   <br/>
+  <div class="field form-group">
+    <%= form.number_field :user_id, id: :task_user_id, class:"form-control", value: current_user.id  %>
+  </div>
   <div class="actions">
     <%= form.submit class:'btn btn-secondary' %>
   </div>
