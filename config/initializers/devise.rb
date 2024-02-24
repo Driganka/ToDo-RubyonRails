@@ -308,4 +308,11 @@ Devise.setup do |config|
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
+
+  # This line adds turbo_stream as a navigational format. Turbo Streams are a part of Turbo,
+  # which lets us send server-rendered HTML and render pages without using much JavaScript.
+  # We need to add this for Devise 4.8.1 to work with Rails 7; otherwise, we would
+  # get an undefined method user_url error.
+  config.navigational_formats = ['*/*', :html, :turbo_stream]
+
 end

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :tasks
   get 'home/index'
   root to: 'home#index' # Not required for API only applications
@@ -8,4 +9,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  
 end
